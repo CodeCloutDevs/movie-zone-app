@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1006732166717",
+    "project_id": "eswatini-movie-zone",
+    "storage_bucket": "eswatini-movie-zone.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1006732166717:android:88721b9cfda411bd090c54",
+        "android_client_info": {
+          "package_name": "com.codecloutdevelopers.movie_zone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1006732166717-3lse6od41ve3aa243tbhki1fo5q5l36n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzDUNc4hQ0shyqlXvOIZF7wyhDGThjGek"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1006732166717-3lse6od41ve3aa243tbhki1fo5q5l36n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
