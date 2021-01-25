@@ -10,9 +10,11 @@ class DatabaseService {
     return snapshot.docs.map((doc) {
       return Today(
           doc.id,
+          doc.data()['title'],
           doc.data()['category'],
           doc.data()['cover'],
-          doc.data()['date'], doc.data()['limits'],
+          doc.data()['date'],
+          doc.data()['limits'],
           doc.data()['starring_one'],
           doc.data()['starring_two'],
           doc.data()['starring_three'],

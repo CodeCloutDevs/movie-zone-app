@@ -1,5 +1,6 @@
 class Today {
   final String id;
+  final String title;
   final String category;
   final String cover;
   final String date;
@@ -13,6 +14,7 @@ class Today {
 
   Today(
       this.id,
+      this.title,
       this.category,
       this.cover,
       this.date,
