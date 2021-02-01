@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:movie_zone/models/today.dart';
+import 'package:movie_zone/models/today_model.dart';
 import 'package:provider/provider.dart';
 
 class TodayList extends StatefulWidget {
@@ -12,7 +12,7 @@ class _TodayListState extends State<TodayList> {
   @override
   Widget build(BuildContext context) {
 
-    final today = Provider.of<List<Today>>(context) ?? [];
+    final today = Provider.of<List<TodayModel>>(context) ?? [];
 
     return ListView.builder(
         itemCount: today.length,
@@ -80,7 +80,7 @@ class _TodayListState extends State<TodayList> {
                       Row(
                         children: [
                           Text(
-                            today[index].timeslots[0] ?? '',
+                            today[index].timeSlots[0]  == null ? '' : today[index].timeSlots[0],
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Colors.pink,
@@ -89,7 +89,7 @@ class _TodayListState extends State<TodayList> {
                           ),
                           SizedBox(width: 20.0,),
                           Text(
-                            today[index].timeslots[1] ?? '',
+                            today[index].timeSlots[1]  == null ? '' : today[index].timeSlots[1],
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Colors.pink,
@@ -98,7 +98,7 @@ class _TodayListState extends State<TodayList> {
                           ),
                           SizedBox(width: 20.0,),
                           Text(
-                            today[index].timeslots[2] ?? '',
+                            today[index].timeSlots[2]  == null ? '' : today[index].timeSlots[2],
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               color: Colors.pink,

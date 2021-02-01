@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:movie_zone/models/soon.dart';
-import 'package:movie_zone/models/today.dart';
+import 'package:movie_zone/models/soon_model.dart';
+import 'package:movie_zone/models/today_model.dart';
 import 'package:provider/provider.dart';
 
 class SoonList extends StatefulWidget {
@@ -13,7 +13,7 @@ class _SoonListState extends State<SoonList> {
   @override
   Widget build(BuildContext context) {
 
-    final soon = Provider.of<List<Soon>>(context) ?? [];
+    final soon = Provider.of<List<SoonModel>>(context) ?? [];
 
     return ListView.builder(
         itemCount: soon.length,

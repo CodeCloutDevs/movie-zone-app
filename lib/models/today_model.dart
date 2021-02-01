@@ -1,28 +1,28 @@
-class Today {
+class TodayModel {
   final String id;
   final String title;
   final String category;
   final String cover;
   final String date;
   final String limits;
-  final dynamic starring_one;
-  final dynamic starring_two;
-  final dynamic starring_three;
-  final dynamic timeslots;
+  final dynamic starringOne;
+  final dynamic starringTwo;
+  final dynamic starringThree;
+  final dynamic timeSlots;
   final String trailer;
   final String storyline;
 
-  Today(
+  TodayModel(
       this.id,
       this.title,
       this.category,
       this.cover,
       this.date,
       this.limits,
-      this.starring_one,
-      this.starring_two,
-      this.starring_three,
-      this.timeslots,
+      this.starringOne,
+      this.starringTwo,
+      this.starringThree,
+      this.timeSlots,
       this.trailer,
       this.storyline
   );

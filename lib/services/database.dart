@@ -1,14 +1,14 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:movie_zone/models/soon.dart';
-import 'package:movie_zone/models/today.dart';
+import 'package:movie_zone/models/soon_model.dart';
+import 'package:movie_zone/models/today_model.dart';
 
 class DatabaseService {
   final CollectionReference todayCollection = FirebaseFirestore.instance.collection('today');
   final CollectionReference soonCollection = FirebaseFirestore.instance.collection('soon');
 
-  List<Today> _todaySnapshot (QuerySnapshot snapshot) {
+  List<TodayModel> _todaySnapshot (QuerySnapshot snapshot) {
     return snapshot.docs.map((doc) {
-      return Today(
+      return TodayModel(
           doc.id,
           doc.data()['title'],
           doc.data()['category'],
@@ -26,13 +26,13 @@ class DatabaseService {
   }
 
   //Get today stream
-  Stream<List<Today>> get today {
+  Stream<List<TodayModel>> get today {
     return todayCollection.snapshots().map(_todaySnapshot);
   }
 
-  List<Soon> _soonSnapshot (QuerySnapshot snapshot) {
+  List<SoonModel> _soonSnapshot (QuerySnapshot snapshot) {
     return snapshot.docs.map((doc) {
-      return Soon(
+      return SoonModel(
         id: doc.id,
           cover: doc.data()['cover'] ?? '',
           trailer: doc.data()['trailer'] ?? ''
@@ -40,7 +40,7 @@ class DatabaseService {
     }).toList();
   }
 
-  Stream<List<Soon>> get soons {
+  Stream<List<SoonModel>> get soons {
     return soonCollection.snapshots().map(_soonSnapshot);
   }
 }

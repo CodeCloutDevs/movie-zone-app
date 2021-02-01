@@ -31,7 +31,8 @@ dependencies:
   firebase_core: ^0.6.0
   cloud_firestore: ^0.15.0
   provider: ^4.3.2+3
-  flutter_spinkit: "^4.1.2"
+  flutter_spinkit: ^4.1.2
+  animated_splash_screen: ^1.0.1+2
 
 dev_dependencies:
   flutter_test:
@@ -49,6 +50,9 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/images/icon.png
+    - assets/images/movie.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
